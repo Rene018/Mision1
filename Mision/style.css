@@ -1,0 +1,141 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #302158;
+    font-size: 20px;
+    color: #e62f6c;
+
+}
+
+body {
+    height: 100vmax;
+    background-color: aliceblue;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+#cont-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+}
+
+#inicio a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#inicio {
+
+    background-image: url('asset/background__welcome.jpg');
+    height: 100vh;
+}
+
+#op {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+#content-inicio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+
+}
+
+#acerca {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+#content-acerca {
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+    height: 100vh;
+    grid-template:
+        'a b c' max-content
+        'd . .' 8% /1fr 33.333% 1fr;
+}
+
+#presentacion {
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    gap: 10px;
+}
+
+#img-acerca {
+    grid-area: b;
+
+}
+
+#habilidades {
+    grid-area: c;
+}
+
+#vc {
+    grid-area: d;
+}
+
+#servicios {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+#content-servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    grid-template:
+        'a b c' max-content
+        'd . .' 8% /1fr 33.333% 1fr;
+}
+
+#servicios{
+    display: flex;
+    height: 100vh;
+}
+#content-servicios{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+    align-items: center;
+}
+#container-servicios{
+display: flex;
+flex-direction: column;
+width: 90%;
+}
+#container-servicios1, #container-servicios2{
+    display: flex;
+    align-items: center;
+    
+}
+#servicio-1, #servicio-2, #servicio-3, #servicio-4, #servicio-5, #servicio-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
