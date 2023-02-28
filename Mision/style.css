@@ -1,0 +1,90 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #333;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+body{
+    height: 100vmax;
+    background-color: aliceblue;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+#cont-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+}
+
+#inicio.a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#inicio{
+    
+    background-image: url('asset/background__welcome.jpg');
+    height: 100vh;
+}
+#op{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+#content-inicio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    
+}
+
+#acerca{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+#content-acerca{
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+    height: 100vh;
+    grid-template:
+        'a b c' max-content
+        'd . .' 8% /1fr 33.333% 1fr;
+}
+#presentacion{
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    gap: 10px;
+}
+#img-acerca{
+    grid-area: b;
+    
+}
+#habilidades{
+    grid-area: c;
+}
+#vc{
+    grid-area: d;
+}
+img{
+    width: 100%;
+}
