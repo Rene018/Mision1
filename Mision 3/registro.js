@@ -17,7 +17,6 @@ class Persona {
     }
 }
 boton.addEventListener('click', function (e) {
-    e.preventDefault()
     const nombre = document.querySelector('#Nombre').value
     const apellidos = document.querySelector('#Apellidos').value
     const area = document.querySelector('#Area').value
@@ -28,21 +27,32 @@ boton.addEventListener('click', function (e) {
     if (nombre == "" || apellidos == "" || area == "" || user == "" || edad == "" || direccion == "" || email == "") {
 
     } else {
-        personas.forEach(element => {
-
-            if (element.user == user) {
-                alert('este usuario ya esta en uso')
-            } else {
-                const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
-                personas.push(persona)
-                document.getElementById("formulario").reset();
+        if (personas.length > 0) {
+            for (let index = 0; index < personas.length; index++) {
+                const element = personas[index];
+                if (element.user == user) {
+                    alert('usuario en uso')
+                } else {
+                    const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
+                    personas.push(persona)
+                    document.getElementById("formulario").reset();
+                }
             }
-        });
+        } else {
+            const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
+            personas.push(persona)
+            document.getElementById("formulario").reset();
+        }
 
 
     }
     relenar()
-})
+});
+
+
+
+
+
 volver.addEventListener('click', function () {
     localStorage.clear()
     localStorage.setItem('personasg', JSON.stringify(personas))
