@@ -26,25 +26,28 @@ boton.addEventListener('click', function (e) {
     const direccion = document.querySelector('#Direccion').value
     const email = document.querySelector('#Email').value
     if (nombre == "" || apellidos == "" || area == "" || user == "" || edad == "" || direccion == "" || email == "") {
-        console.log('hola');
+
     } else {
-        const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
-        personas.push(persona)
-        document.getElementById("formulario").reset();
+        personas.forEach(element => {
+
+            if (element.user == user) {
+                alert('este usuario ya esta en uso')
+            } else {
+                const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
+                personas.push(persona)
+                document.getElementById("formulario").reset();
+            }
+        });
+
+
     }
-relenar()
+    relenar()
 })
-volver.addEventListener('click', function (e) {
-    e.preventDefault()
+volver.addEventListener('click', function () {
     localStorage.clear()
-    for (let index = 0; index < personas.length; index++) {
-        const element = personas[index];
-        if (element.cedula == ipnB.value) {
-            localStorage.setItem('personag', JSON.stringify(element))
-        }
-    }
+    localStorage.setItem('personasg', JSON.stringify(personas))
 })
 function relenar() {
-    personas.forEach(element => {console.log(element);});
+    personas.forEach(element => { console.log(element); });
 }
 
