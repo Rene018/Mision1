@@ -32,7 +32,7 @@ boton.addEventListener('click', function (e) {
         personas.push(persona)
         document.getElementById("formulario").reset();
     }
-
+relenar()
 })
 volver.addEventListener('click', function (e) {
     e.preventDefault()
@@ -43,7 +43,8 @@ volver.addEventListener('click', function (e) {
             localStorage.setItem('personag', JSON.stringify(element))
         }
     }
-    document.getElementById("form-header").reset();
 })
-
+function relenar() {
+    personas.forEach(element => {console.log(element);});
+}
 
