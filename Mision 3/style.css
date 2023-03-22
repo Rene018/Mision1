@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.sombreado {
+    background-color: bisque;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 24% 1fr;
+}
+
+.barra-lateral {
+    background-color: #C9231B;
+
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+.header-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.header-content {
+    margin: 2%;
+    display: flex;
+    width: 56%;
+    justify-content: space-between;
+}
+
+.header-btn {
+    background: #CC2233;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem 2.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.buscador-lbl{
+    display: flex;
+    align-items: center;
+}
+.buscador-text{
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: flex;
+    margin-right: 0.5rem;
+    align-items: center;
+}
+.buscador-btn{
+    height: 90%;
+    border-radius: 50%;
+    padding: 0.05rem 0.15rem;
+    border: 1px black solid;
+    font-size: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+.buscador-inpt{
+    padding: 1%;
+    height: 2.1rem;
+    width: 20rem;
+    border-radius: 0.9rem;
+    border: 1px black solid;
+    background-color: #F3F6FB;
+}
+.table{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 3%;
+}
+tr{
+    padding: 1%;
+    background-color: #F3F6FB;
+}
