@@ -27,24 +27,9 @@ boton.addEventListener('click', function (e) {
     if (nombre == "" || apellidos == "" || area == "" || user == "" || edad == "" || direccion == "" || email == "") {
 
     } else {
-        if (personas.length > 0) {
-            for (let index = 0; index < personas.length; index++) {
-                const element = personas[index];
-                if (element.user == user) {
-                    alert('usuario en uso')
-                } else {
-                    const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
-                    personas.push(persona)
-                    document.getElementById("formulario").reset();
-                }
-            }
-        } else {
-            const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
-            personas.push(persona)
-            document.getElementById("formulario").reset();
-        }
-
-
+        const persona = new Persona(nombre, apellidos, area, user, edad, direccion, email)
+        personas.push(persona)
+        document.getElementById("formulario").reset();
     }
     relenar()
 });
