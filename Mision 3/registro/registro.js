@@ -31,18 +31,16 @@ boton.addEventListener('click', function (e) {
         personas.push(persona)
         document.getElementById("formulario").reset();
     }
-    relenar()
+    console.log(personas.length);
 });
 
-
-
-
-
 volver.addEventListener('click', function () {
-    localStorage.clear()
     localStorage.setItem('personasg', JSON.stringify(personas))
 })
+
 function relenar() {
     personas.forEach(element => { console.log(element); });
 }
+
+
 
