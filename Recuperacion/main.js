@@ -1,5 +1,5 @@
 let api = 'https://jsonplaceholder.typicode.com/users'
-// let btn = document.getElementById('formulario')
+let btn = document.getElementById('btn1')
 
 async function buscar() {
     const response = await fetch(api)
