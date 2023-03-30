@@ -6,19 +6,19 @@ async function buscar() {
     const data = await response.json()
     localStorage.setItem('users', JSON.stringify(data))
 }
-
 buscar()
 
-let email=document.querySelector('#email')
-let user=document.querySelector('#user')
-btn.addEventListener('submit', function (e) {
+btn.addEventListener('click', function (e) {
     e.preventDefault()
-    data.forEach(element => {
-        if (email.value==element.email && user.value==element.username) {
-            console.log(element);
-        } else {
-            
+    const users= JSON.parse(localStorage.getItem('users'))
+    let email=document.querySelector('#email').value
+    let user=document.querySelector('#user').value
+    users.forEach(element => {
+        if ((element.email==email)&&(element.username==user)) {
+            location.href= './welcome.html'
+        }
+        else{
+            document.querySelector('.error-container').classList.remove('remove')  
         }
     });
-    
 })
